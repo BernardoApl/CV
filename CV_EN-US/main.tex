@@ -1,0 +1,286 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% CV - Bernardo Lopes %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,withhyper,hidelinks]{altacv}
+
+%Layout
+\geometry{left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm,paperheight=50cm}
+
+%Packages
+\usepackage{paracol}
+\usepackage{gensymb}
+
+% Remove automatic hyphenation
+\usepackage[none]{hyphenat}
+\let\raggedright\relax
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+%Colors
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{VividPurple}{HTML}{3E0097}
+
+\colorlet{name}{black}
+\colorlet{tagline}{VividPurple}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+\colorlet{subheading}{VividPurple}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{black}
+\colorlet{sub}{SlateGrey}
+\colorlet{body}{black}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\newcommand{\cvsubevent}[4]{%
+    \sbox0{{\textbf{\color{accent}#2}}}%
+    \sbox1{{\small\color{sub}\makebox[0.26\linewidth][l]{\cvDateMarker~#3}}}%
+    \noindent%
+    \makebox[\linewidth][s]{%
+        \usebox0%
+        \hfill%
+        \textcolor{sub!30}{\hdashrule[0.5ex]{\dimexpr\linewidth-\wd0-\wd1-2\intextsep\relax}{0.6pt}{0.5ex}}%
+        \hfill%
+        \usebox1%
+    }%
+  \medskip\normalsize
+}
+
+\newcommand{\cveventinv}[4]{%
+  {\large\color{emphasis}#1}
+  \smallskip\normalsize
+  \ifstrequal{#2}{}{}{
+  \textbf{\color{accent}#2}
+  \smallskip}
+  \ifstrequal{#4}{}{}{{\small\hfill\color{emphasis}\makebox[0.1\linewidth][l]{\faMapMarker~#4}}}%
+  \ifstrequal{#3}{}{}{{\small\hfill\color{emphasis}\makebox[0.26\linewidth][l]{\faCalendar~#3}}}\par
+  \medskip\normalsize
+}
+
+\newcommand{\cvproject}[3]{%
+    \sbox0{{\textbf{\small\color{accent}{#1}}}}%
+    \sbox1{{\small\color{emphasis}#3\hspace{0.5em}\makebox[0.33\linewidth][l]{#2}}}%
+    \noindent%
+    \makebox[\linewidth][s]{%
+        \usebox0%
+        \hfill%        \textcolor{sub!30}{\hdashrule[0.5ex]{\dimexpr\linewidth-\wd0-\wd1-2\intextsep\relax}{0.6pt}{0.5ex}}%
+        \hfill%
+        \usebox1%
+    }%
+  \medskip\normalsize
+}
+
+%
+
+\begin{document}
+\name{Bernardo Lopes}
+\tagline{Full-Stack Developer focused on Backend and Infrastructure}
+%\photo{2.5cm}{}
+\personalinfo{%
+ \location{Betim, Brazil}
+\email{bernardo.lopes.software@gmail.com}
+\homepage{}
+\linkedin{bernardo-lopes-3500b92b6/}
+\github{BernardoAPL}
+
+}
+
+\begin{fullwidth}
+  \makecvheader
+\end{fullwidth}
+
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% About %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \cvsection{About}
+
+  \small{I am a developer specializing in \textbf{Backend} and \textbf{Infrastructure}, strengthened by a focus on \textbf{Software} and \textbf{Software Management}. My passion is building robust platforms for \textbf{clients}, creating sustainable \textbf{infrastructure as code}, and architecting systems in a simple and straightforward way. My experience spans projects in \textbf{Java}, \textbf{React}, and \textbf{Frontend (HTML, CSS, JS)}, enabling me to build platforms that are not only reliable and easy to maintain but also pleasant to use.}
+
+
+  %\textcolor{emphasis}{Certifications:}\smallskip
+  %\cvachievement{\faTrophy}{Fantastic Achievement}{and some details about it}
+
+  \switchcolumn
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Education %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  \cvsection{Education}
+
+  \cvevent{B.S.\ in Software Engineering}{PUC Minas - Cora\c{c}\~ao Eucar\'{\i}stico}{Jan 2024 -- Present}{}
+
+  \begin{itemize}
+    \setlength{\itemindent}{0em}
+    \item   \small{Project Management}
+    \item   \small{Software Production and Development}
+  \end{itemize}
+  \cvevent{Industrial Automation Technician}{SENAI Maria Madalena Nogueira}{2021 -- 2023}{Betim, MG}
+
+\begin{itemize}
+  \setlength{\itemindent}{0em}
+  \item \small{Technical training focused on electronics, sensors, PLCs, and automated systems.}
+  \item \small{Programming logic controllers (PLCs) and integrating industrial systems.}
+  \item \small{Hands-on projects involving electrical circuits, pneumatics, robotics, and process automation.}
+\end{itemize}
+
+
+\end{paracol}
+
+\medskip
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Skills %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Skills}
+
+\small{
+  \textcolor{emphasis}{Languages: }
+  \smallskip
+  \cvtag{English B2}
+  \cvtag{Spanish A2}
+}
+
+
+\small{
+  \textcolor{emphasis}{Languages: }
+  \smallskip
+  \cvtag{Java}
+  \cvtag{TypeScript}
+  \cvtag{JavaScript}
+  \cvtag{C++}
+  \cvtag{HTML}
+  \cvtag{CSS}
+}
+
+\smallskip
+
+\small{
+  \textcolor{emphasis}{Frameworks: }
+  \smallskip
+  \cvtag{React}
+  \cvtag{Spring Boot}
+}
+
+\smallskip
+
+\small{
+  \textcolor{emphasis}{Infrastructure \& Automation: }
+  \smallskip
+  \cvtag{PostgreSQL}
+  \cvtag{MySQL}
+  \cvtag{Firebase}
+  \cvtag{n8n}
+}
+
+\smallskip
+
+\small{
+  \textcolor{emphasis}{DevOps: }
+  \smallskip
+  \cvtag{Git}
+  \cvtag{GitHub Actions}
+}
+
+\smallskip
+
+\small{
+  \textcolor{emphasis}{Tools: }
+  \smallskip
+  \cvtag{VS Code}
+  \cvtag{IntelliJ}
+  \cvtag{Figma}
+}
+
+
+\medskip
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Experience %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Experience}
+
+\medskip
+
+\cveventinv{Municipality of Betim}{Ombudsman Office -- Statistics}{March 2024 -- July 2025}{Betim, MG}
+
+\cvsubevent{}{Projects and Deliverables}{}{}
+
+\begin{itemize}
+  \item \small{Developed advanced \textbf{Power BI} dashboards integrated with multiple data sources.}
+  \item \small{Automated reporting by integrating \textbf{Excel} with various corporate spreadsheets.}
+  \item \small{Performed modeling and statistical analysis to generate strategic reports for municipal leadership.}
+  \item \small{Created analytical reports and automated calculations to support decision-making.}
+\end{itemize}
+
+\medskip
+
+\cveventinv{Municipality of Betim}{Technology Intern}{August 2025 -- Present}{Betim, MG}
+
+\cvsubevent{}{Responsibilities and Activities}{}{}
+
+\begin{itemize}
+  \item \small{Provided \textbf{technical support} to system users, ensuring stability and fast resolution of incidents.}
+  \item \small{Developed and programmed \textbf{internal solutions} to fix recurring problems and optimize workflows.}
+  \item \small{Supported maintenance and continuous improvement of the systems used by municipal departments.}
+  \item \small{Collaborated with operational teams to automate tasks and reduce manual errors.}
+\end{itemize}
+
+\medskip
+
+
+\medskip
+
+\smallskip
+%\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Projects %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsection{Key Projects}
+
+\cvproject{CarExpress}{\href{https://github.com/BernardoApl/CarExpress}{github.com/BernardoApl/CarExpress}}{\faGithub}
+\begin{itemize}
+  \item \small{Complete vehicle management system with registration, search, update, removal, distance calculation between cities, automatic backup, and restoration.}
+  \item \small{Built as a CLI application in \textbf{C++}, using object-oriented programming, binary \texttt{.dat} files, exception handling, vectors, and structs.}
+  \item \small{Technologies: C++, OOP, Binary files, CLI}
+\end{itemize}
+
+\medskip
+
+\cvproject{Fishing Pond Management System}{\href{https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-2-ti2-3740100-pesque-e-pague}{github.com/ICEI-PUC-Minas.../pesque-e-pague}}{\faGithub}
+\begin{itemize}
+  \item \small{Full platform for managing pay-to-fish venues, integrating inventory, sales, reservations, equipment rentals, and financial reports in a single system.}
+  \item \small{Designed to replace manual processes, increase operational efficiency, and improve the customer experience.}
+  \item \small{Technologies: TypeScript, React, Java, Spring Boot, PostgreSQL}
+\end{itemize}
+
+\medskip
+
+\cvproject{Payroll Calculation}{\href{https://github.com/pm-puc-minas/calculo-folha-pagamento-lab-1-grupo-1}{github.com/pm-puc-minas/calculo-folha-pagamento}}{\faGithub}
+\begin{itemize}
+  \item \small{Payroll system that calculates salaries, bonuses, benefits, legal deductions (INSS, FGTS, IRRF), and generates a complete payroll report for users.}
+  \item \small{Includes a frontend in \textbf{TypeScript + React} and a backend in \textbf{Java Spring Boot}, with unit tests and REST APIs for managing employees.}
+  \item \small{Technologies: Java Spring Boot, React, TypeScript, CSS3, PostgreSQL}
+\end{itemize}
+
+\medskip
+
+
+\end{document}
